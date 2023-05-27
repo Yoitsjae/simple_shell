@@ -2,37 +2,44 @@
 
 /**
  * main - entry point
- * return: 0
- * return: 1 on error
+ * @ac: argument count
+ * @av: argument
+ *
+ * Return: 0 on success, 1 on error
  */
-
-int main(void)
+int main(int ac, char **av)
 {
-	char *lineptr = NULL, **tokens = NULL;
-	int Flag = 0;
-	size_t line_sz;
-	ssize_t line_len = 0;
+	info_t data[] = { INFO_INIT };
+	int filedes = 2;
 
-	while (line_len == 0)
+	asm ("mov %1, %0\n\t"
+		"add $3, %0"
+		: "=r" (filedes)
+		: "r" (filedes));
+
+	if (ac == 2)
 	{
-		signal(SIGINT, signalhandler);
-		if (isatty(STDIN_FILENO))
-			write(STDOUT_FILENO, "($) ", 4);
-		line_len = getline(&lineptr, &line_sz, stdin);
-		if (line_len < 0 && isatty(STDIN_FILENO))
+		filedes = open(av[1], O_RDONLY);
+		if (filedes == -1)
 		{
-			_putchar('\n');
-			break;
+			if (errno == EACCES)
+				exit(126);
+			if (errno == ENOENT)
+			{
+				_eputs(av[0]);
+				_eputs(": 0: Can't open ");
+				_eputs(av[1]);
+				_eputchar('\n');
+				_eputchar(BUF_FLUSH);
+				exit(127);
+			}
+			return (EXIT_FAILURE);
 		}
-		tokens = split_str(lineptr, " \t\n");
-		Flag = builtInexec(tokens, lineptr);
-		if (!Flag)
-		{
-			tokens[0] = find(tokens[0]);
-			execute(tokens[0], tokens);
-			free_array(tokens);
-		}
+		data->readfd = filedes;
 	}
-	free(lineptr);
-	return (0);
+	populate_env_list(data);
+	read_history(data);
+	hsh(data, av);
+	return (EXIT_SUCCESS);
 }
+

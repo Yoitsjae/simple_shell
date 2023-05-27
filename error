@@ -1,0 +1,193 @@
+add.c:1: error: ISO C forbids an empty translation unit [-Werror=pedantic]
+cc1: all warnings being treated as errors
+_atoi.c:8:17: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    8 | int interactive(info_t *info)
+      |                 ^~~~~~
+      |                 ino_t
+atoi.c:1: error: ISO C forbids an empty translation unit [-Werror=pedantic]
+cc1: all warnings being treated as errors
+builtin1.c:9:16: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    9 | int _myhistory(info_t *info)
+      |                ^~~~~~
+      |                ino_t
+builtin1.c:21:17: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   21 | int unset_alias(info_t *info, char *str)
+      |                 ^~~~~~
+      |                 ino_t
+builtin1.c:43:15: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   43 | int set_alias(info_t *info, char *str)
+      |               ^~~~~~
+      |               ino_t
+builtin1.c:62:17: error: unknown type name ‘list_t’
+   62 | int print_alias(list_t *node)
+      |                 ^~~~~~
+builtin1.c:84:14: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   84 | int _myalias(info_t *info)
+      |              ^~~~~~
+      |              ino_t
+builtin.c:9:13: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    9 | int _myexit(info_t *info)
+      |             ^~~~~~
+      |             ino_t
+builtin.c:36:11: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   36 | int _mycd(info_t *info)
+      |           ^~~~~~
+      |           ino_t
+builtin.c:85:13: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   85 | int _myhelp(info_t *info)
+      |             ^~~~~~
+      |             ino_t
+environ.c:8:12: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    8 | int _myenv(info_t *info)
+      |            ^~~~~~
+      |            ino_t
+environ.c:20:15: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   20 | char *_getenv(info_t *info, const char *name)
+      |               ^~~~~~
+      |               ino_t
+environ.c:41:15: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   41 | int _mysetenv(info_t *info)
+      |               ^~~~~~
+      |               ino_t
+environ.c:58:17: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   58 | int _myunsetenv(info_t *info)
+      |                 ^~~~~~
+      |                 ino_t
+environ.c:78:23: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   78 | int populate_env_list(info_t *info)
+      |                       ^~~~~~
+      |                       ino_t
+fork.c: In function ‘main’:
+fork.c:12:5: error: ‘pid’ is used uninitialized in this function [-Werror=uninitialized]
+   12 |  if (pid == -1)
+      |     ^
+cc1: all warnings being treated as errors
+getenv.c:8:20: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    8 | char **get_environ(info_t *info)
+      |                    ^~~~~~
+      |                    ino_t
+getenv.c:25:15: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   25 | int _unsetenv(info_t *info, char *var)
+      |               ^~~~~~
+      |               ino_t
+getenv.c:57:13: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   57 | int _setenv(info_t *info, char *var, char *value)
+      |             ^~~~~~
+      |             ino_t
+getinfo.c:7:17: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    7 | void clear_info(info_t *info)
+      |                 ^~~~~~
+      |                 ino_t
+getinfo.c:20:15: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   20 | void set_info(info_t *info, char **av)
+      |               ^~~~~~
+      |               ino_t
+getinfo.c:51:16: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   51 | void free_info(info_t *info, int all)
+      |                ^~~~~~
+      |                ino_t
+getLine.c:10:19: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   10 | ssize_t input_buf(info_t *info, char **buf, size_t *len)
+      |                   ^~~~~~
+      |                   ino_t
+getLine.c:52:19: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   52 | ssize_t get_input(info_t *info)
+      |                   ^~~~~~
+      |                   ino_t
+getLine.c:98:18: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   98 | ssize_t read_buf(info_t *info, char *buf, size_t *i)
+      |                  ^~~~~~
+      |                  ino_t
+getLine.c:117:14: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+  117 | int _getline(info_t *info, char **ptr, size_t *length)
+      |              ^~~~~~
+      |              ino_t
+getLine.c: In function ‘sigintHandler’:
+getLine.c:165:11: error: ‘BUF_FLUSH’ undeclared (first use in this function)
+  165 |  _putchar(BUF_FLUSH);
+      |           ^~~~~~~~~
+getLine.c:165:11: note: each undeclared identifier is reported only once for each function it appears in
+lists1.c:8:23: error: unknown type name ‘list_t’
+    8 | size_t list_len(const list_t *h)
+      |                       ^~~~~~
+lists1.c: In function ‘list_len’:
+lists1.c:14:8: error: request for member ‘next’ in something not a structure or union
+   14 |   h = h->next;
+      |        ^~
+lists1.c: At top level:
+lists1.c:25:24: error: unknown type name ‘list_t’
+   25 | char **list_to_strings(list_t *head)
+      |                        ^~~~~~
+lists1.c:61:25: error: unknown type name ‘list_t’
+   61 | size_t print_list(const list_t *h)
+      |                         ^~~~~~
+lists1.c: In function ‘print_list’:
+lists1.c:67:9: error: implicit declaration of function ‘convert_number’ [-Werror=implicit-function-declaration]
+   67 |   _puts(convert_number(h->num, 10, 0));
+      |         ^~~~~~~~~~~~~~
+lists1.c:67:25: error: request for member ‘num’ in something not a structure or union
+   67 |   _puts(convert_number(h->num, 10, 0));
+      |                         ^~
+lists1.c:70:10: error: request for member ‘str’ in something not a structure or union
+   70 |   _puts(h->str ? h->str : "(nil)");
+      |          ^~
+lists1.c:70:19: error: request for member ‘str’ in something not a structure or union
+   70 |   _puts(h->str ? h->str : "(nil)");
+      |                   ^~
+lists1.c:72:8: error: request for member ‘next’ in something not a structure or union
+   72 |   h = h->next;
+      |        ^~
+lists1.c: At top level:
+lists1.c:85:1: error: unknown type name ‘list_t’
+   85 | list_t *node_starts_with(list_t *node, char *prefix, char c)
+      | ^~~~~~
+lists1.c:85:26: error: unknown type name ‘list_t’
+   85 | list_t *node_starts_with(list_t *node, char *prefix, char c)
+      |                          ^~~~~~
+lists1.c:105:24: error: unknown type name ‘list_t’
+  105 | ssize_t get_node_index(list_t *head, list_t *node)
+      |                        ^~~~~~
+lists1.c:105:38: error: unknown type name ‘list_t’
+  105 | ssize_t get_node_index(list_t *head, list_t *node)
+      |                                      ^~~~~~
+cc1: all warnings being treated as errors
+lists.c:10:1: error: unknown type name ‘list_t’
+   10 | list_t *add_node(list_t **head, const char *str, int num)
+      | ^~~~~~
+lists.c:10:18: error: unknown type name ‘list_t’
+   10 | list_t *add_node(list_t **head, const char *str, int num)
+      |                  ^~~~~~
+lists.c:42:1: error: unknown type name ‘list_t’
+   42 | list_t *add_node_end(list_t **head, const char *str, int num)
+      | ^~~~~~
+lists.c:42:22: error: unknown type name ‘list_t’
+   42 | list_t *add_node_end(list_t **head, const char *str, int num)
+      |                      ^~~~~~
+lists.c:80:29: error: unknown type name ‘list_t’
+   80 | size_t print_list_str(const list_t *h)
+      |                             ^~~~~~
+lists.c: In function ‘print_list_str’:
+lists.c:86:10: error: request for member ‘str’ in something not a structure or union
+   86 |   _puts(h->str ? h->str : "(nil)");
+      |          ^~
+lists.c:86:19: error: request for member ‘str’ in something not a structure or union
+   86 |   _puts(h->str ? h->str : "(nil)");
+      |                   ^~
+lists.c:88:8: error: request for member ‘next’ in something not a structure or union
+   88 |   h = h->next;
+      |        ^~
+lists.c: At top level:
+lists.c:100:26: error: unknown type name ‘list_t’
+  100 | int delete_node_at_index(list_t **head, unsigned int index)
+      |                          ^~~~~~
+lists.c:138:16: error: unknown type name ‘list_t’
+  138 | void free_list(list_t **head_ptr)
+      |                ^~~~~~
+parser.c:9:12: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+    9 | int is_cmd(info_t *info, char *path)
+      |            ^~~~~~
+      |            ino_t
+parser.c:50:17: error: unknown type name ‘info_t’; did you mean ‘ino_t’?
+   50 | char *find_path(info_t *info, char *pathstr, char *cmd)
+      |                 ^~~~~~
+      |                 ino_t
